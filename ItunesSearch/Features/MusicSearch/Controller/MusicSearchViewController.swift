@@ -15,6 +15,7 @@ class MusicSearchViewController: UIViewController {
         let view = UISearchTextField()
         view.placeholder = Strings.kArtistName.rawValue
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.text = Strings.kInitialArtistName.rawValue
         return view
     }()
     
@@ -51,7 +52,7 @@ class MusicSearchViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.loadListener()
-        self.viewModel?.loadData(term: "Eminem")
+        self.viewModel?.loadData(term: self.searchTextField.text ?? "")
     }
     
     private func loadListener() {
@@ -150,10 +151,22 @@ extension MusicSearchViewController: ViewCodeProtocol {
         ]
         NSLayoutConstraint.activate(constants)
     }
+    
+    func viewCodeAdditioalSetup() {
+        self.searchTextField.delegate = self
+    }
+}
+
+extension MusicSearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.viewModel?.loadData(term: textField.text ?? "")
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 extension MusicSearchViewController: ErrorViewProtocol {
     func tryAgain() {
-        self.viewModel?.loadData(term: "Eminem")
+        self.viewModel?.loadData(term: self.searchTextField.text ?? "")
     }
 }

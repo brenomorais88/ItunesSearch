@@ -34,6 +34,7 @@
 		0FD1AB452A8D289100DA30DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB442A8D289100DA30DC /* Constants.swift */; };
 		0FD1AB472A8D333C00DA30DC /* MusicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB462A8D333C00DA30DC /* MusicsView.swift */; };
 		0FD1AB4A2A8D350500DA30DC /* MusicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB492A8D350500DA30DC /* MusicsCell.swift */; };
+		0FD1AB4D2A8D3CA700DA30DC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB4C2A8D3CA700DA30DC /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		0FD1AB442A8D289100DA30DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0FD1AB462A8D333C00DA30DC /* MusicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsView.swift; sourceTree = "<group>"; };
 		0FD1AB492A8D350500DA30DC /* MusicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsCell.swift; sourceTree = "<group>"; };
+		0FD1AB4C2A8D3CA700DA30DC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 		0FD1AB192A8D0BC500DA30DC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0FD1AB4B2A8D3C9900DA30DC /* Extension */,
 				0FD1AB2B2A8D0D8B00DA30DC /* Common */,
 				0FD1AB1B2A8D0BD500DA30DC /* MusicSearch */,
 				0FD1AB1A2A8D0BC900DA30DC /* MusicsList */,
@@ -275,6 +278,14 @@
 				0FD1AB492A8D350500DA30DC /* MusicsCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0FD1AB4B2A8D3C9900DA30DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB4C2A8D3CA700DA30DC /* UIImageView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +437,7 @@
 				0FD1AB3B2A8D12CC00DA30DC /* ErrorView.swift in Sources */,
 				0FD1AB412A8D192C00DA30DC /* MusicSearchRequest.swift in Sources */,
 				0FD1AAEC2A8D0B9F00DA30DC /* SceneDelegate.swift in Sources */,
+				0FD1AB4D2A8D3CA700DA30DC /* UIImageView+Extension.swift in Sources */,
 				0FD1AB342A8D0E4900DA30DC /* Service.swift in Sources */,
 				0FD1AB1D2A8D0CBD00DA30DC /* MusicSearchCoordinator.swift in Sources */,
 				0FD1AB2A2A8D0D1D00DA30DC /* ITunesService.swift in Sources */,

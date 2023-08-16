@@ -12,4 +12,5 @@ struct Constants {
     static let defaultNegativeMargin: CGFloat = -16
     static let defaultButtonHeight: CGFloat = 50
     static let searchTextHeight: CGFloat = 40
+    static let imageSize100: CGFloat = 100
 }

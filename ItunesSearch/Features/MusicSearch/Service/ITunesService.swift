@@ -14,7 +14,7 @@ protocol ITunesServiceProtocol {
 class ITunesService: Service, ITunesServiceProtocol {
     
     func searchMusicsList(request: MusicSearchRequest, callback: @escaping (Bool, [Musics]?) -> ()) {
-        let term = request.term
+        let term = request.getFixedTerm()
         let limit = request.limit
         
         guard let url = URL(string: "\(self.baseURL)search?term=\(term)&limit=\(limit)") else {

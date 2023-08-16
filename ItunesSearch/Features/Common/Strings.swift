@@ -14,6 +14,9 @@ enum Strings: String {
     case kErrorMessage = "An error has occurred.\nTry again later."
     case kTryAgain = "Try Again"
     case kNoResultsMessage = "no results found"
+    case kInitialArtistName = "Eminem"
+    case kPlaceholder = "placeholder"
+    
 //    case kOk = "Ok"
 //    case kAlert = "Alert"
 //    case kMoreUsers = "Load more users"

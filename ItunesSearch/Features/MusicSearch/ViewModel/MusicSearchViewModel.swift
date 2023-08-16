@@ -32,9 +32,10 @@ class MusicSearchViewModel: ViewModel {
     
     func loadData(term: String) {
         self.viewState.value = .Loading
-
+        
         let request = MusicSearchRequest(term: term,
-                                         limit: self.model.resultsLimit)
+                                         limit: self.model.resultsLimit,
+                                         media: .music)
         
         self.service.searchMusicsList(request: request) { success, musics in
             if success {

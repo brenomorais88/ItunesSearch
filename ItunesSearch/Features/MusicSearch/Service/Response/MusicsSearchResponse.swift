@@ -19,8 +19,10 @@ struct MusicsSearchResponse: Codable {
 
 struct Musics: Codable {
     let collectionName: String?
+    let imgURL: String?
     
     private enum CodingKeys: String, CodingKey {
         case collectionName = "collectionName"
+        case imgURL = "artworkUrl100"
     }
 }

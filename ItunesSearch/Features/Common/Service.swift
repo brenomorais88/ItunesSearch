@@ -11,10 +11,6 @@ class Service {
     let baseURL: String = "https://itunes.apple.com/"
     let decoder = JSONDecoder()
     
-//    let headers: HTTPHeaders = [
-//        "Content-Type": "application/json"
-//    ]
-    
     init() {
         
     }
