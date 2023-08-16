@@ -62,8 +62,8 @@ class MusicSearchViewController: UIViewController {
                     self?.setupEmptyView()
                 case .Error:
                     self?.setupErrorView()
-                case .Data:
-                    self?.setupResultsView()
+                case .Data(let musics):
+                    self?.setupResultsView(musics: musics)
                 }
             }
         })
@@ -76,7 +76,7 @@ class MusicSearchViewController: UIViewController {
         self.loadingView = view
     }
     
-    private func setupResultsView() {
+    private func setupResultsView(musics: [Musics]) {
         self.cleanViews()
         let resultsView = UIView()
         self.contentView.addSubview(resultsView)

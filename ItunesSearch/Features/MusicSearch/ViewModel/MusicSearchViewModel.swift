@@ -9,7 +9,7 @@ import Foundation
 
 enum MusicSearchViewState {
     case Loading
-    case Data//([Result])
+    case Data([Musics])
     case Empty
     case Error
 }
@@ -17,18 +17,36 @@ enum MusicSearchViewState {
 class MusicSearchViewModel: ViewModel {
     let delegate: MusicSearchCoordinatorProtocol
     let model: MusicSearchModel
+    let service: ITunesServiceProtocol
     
     init(delegate: MusicSearchCoordinatorProtocol,
-         model: MusicSearchModel) {
-        
+         model: MusicSearchModel,
+         service: ITunesServiceProtocol = ITunesService()) {
         self.delegate = delegate
         self.model = model
+        self.service = service
         super.init()
     }
     
     var viewState: Observable<MusicSearchViewState> = Observable(.Loading)
     
     func loadData() {
-        
+        let request = MusicSearchRequest(term: "")
+        self.service.searchMusicsList(request: request) { success, musics in
+            if success {
+                guard let musics = musics else {
+                    return
+                }
+                
+                if musics.count > 0 {
+                    self.viewState.value = .Data(musics)
+                } else {
+                    self.viewState.value = .Empty
+                }
+                
+            } else {
+                self.viewState.value = .Error
+            }
+        }
     }
 }
