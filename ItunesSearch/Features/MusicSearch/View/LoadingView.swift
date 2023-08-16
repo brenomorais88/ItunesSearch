@@ -14,12 +14,13 @@ class LoadingView: UIView {
         label.text = Strings.kLoagindMsg.rawValue
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let loading: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView()
-        loading.startAnimating()
+        loading.translatesAutoresizingMaskIntoConstraints = false
         return loading
     }()
     
@@ -32,8 +33,7 @@ class LoadingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupView() {
-        self.backgroundColor = UIColor.white
+    public func setupView() {
         self.viewCodeSetup()
     }
 }
@@ -45,6 +45,14 @@ extension LoadingView: ViewCodeProtocol {
     }
     
     func viewCodeConstraintSetup() {
+        let constants = [
+            loading.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            loading.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            messageLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            messageLabel.topAnchor.constraint(equalTo: loading.bottomAnchor,
+                                              constant: Constants.defaultMargin)
+        ]
+        NSLayoutConstraint.activate(constants)
     }
     
     func viewCodeAdditioalSetup() {

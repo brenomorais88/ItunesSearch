@@ -30,23 +30,26 @@ class MusicSearchViewModel: ViewModel {
     
     var viewState: Observable<MusicSearchViewState> = Observable(.Loading)
     
-    func loadData() {
-        let request = MusicSearchRequest(term: "")
-        self.service.searchMusicsList(request: request) { success, musics in
-            if success {
-                guard let musics = musics else {
-                    return
-                }
-                
-                if musics.count > 0 {
-                    self.viewState.value = .Data(musics)
-                } else {
-                    self.viewState.value = .Empty
-                }
-                
-            } else {
-                self.viewState.value = .Error
-            }
-        }
+    func loadData(term: String) {
+        self.viewState.value = .Error
+//        self.viewState.value = .Loading
+
+//        let request = MusicSearchRequest(term: term,
+//                                         limit: self.model.resultsLimit)
+//        
+//        self.service.searchMusicsList(request: request) { success, musics in
+//            if success {
+//                guard let musics = musics else { return }
+//                
+//                if musics.count > 0 {
+//                    self.viewState.value = .Data(musics)
+//                } else {
+//                    self.viewState.value = .Empty
+//                }
+//                
+//            } else {
+//                self.viewState.value = .Error
+//            }
+//        }
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 struct MusicSearchRequest: Encodable {
     let term: String
-    let limit: Int = 25
+    let limit: Int
 }

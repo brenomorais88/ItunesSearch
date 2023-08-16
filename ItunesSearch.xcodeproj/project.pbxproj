@@ -31,6 +31,7 @@
 		0FD1AB3D2A8D150D00DA30DC /* FirstButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB3C2A8D150D00DA30DC /* FirstButton.swift */; };
 		0FD1AB412A8D192C00DA30DC /* MusicSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB402A8D192C00DA30DC /* MusicSearchRequest.swift */; };
 		0FD1AB432A8D1ADE00DA30DC /* MusicsSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB422A8D1ADE00DA30DC /* MusicsSearchResponse.swift */; };
+		0FD1AB452A8D289100DA30DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB442A8D289100DA30DC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		0FD1AB3C2A8D150D00DA30DC /* FirstButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstButton.swift; sourceTree = "<group>"; };
 		0FD1AB402A8D192C00DA30DC /* MusicSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchRequest.swift; sourceTree = "<group>"; };
 		0FD1AB422A8D1ADE00DA30DC /* MusicsSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsSearchResponse.swift; sourceTree = "<group>"; };
+		0FD1AB442A8D289100DA30DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				0FD1AB322A8D0E4900DA30DC /* ViewModel.swift */,
 				0FD1AB2C2A8D0D9900DA30DC /* Coordinator.swift */,
 				0FD1AB3C2A8D150D00DA30DC /* FirstButton.swift */,
+				0FD1AB442A8D289100DA30DC /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD1AB3D2A8D150D00DA30DC /* FirstButton.swift in Sources */,
+				0FD1AB452A8D289100DA30DC /* Constants.swift in Sources */,
 				0FD1AB2D2A8D0D9900DA30DC /* Coordinator.swift in Sources */,
 				0FD1AB332A8D0E4900DA30DC /* Strings.swift in Sources */,
 				0FD1AB282A8D0D1200DA30DC /* MusicSearchViewController.swift in Sources */,

@@ -17,11 +17,13 @@ class ErrorView: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let tryAgainButton: FirstButton = {
         let button = FirstButton(text: Strings.kTryAgain.rawValue)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -55,17 +57,17 @@ extension ErrorView: ViewCodeProtocol {
     }
     
     func viewCodeConstraintSetup() {
-//        messageLabel.snp.makeConstraints { (make) -> Void in
-//            make.centerY.equalToSuperview()
-//            make.left.equalToSuperview().inset(16)
-//            make.right.equalToSuperview().inset(16)
-//        }
-//
-//        tryAgainButton.snp.makeConstraints { (make) -> Void in
-//            make.left.equalToSuperview().inset(16)
-//            make.right.equalToSuperview().inset(16)
-//            make.bottom.equalToSuperview().inset(60)
-//        }
+        let constants = [
+            messageLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            tryAgainButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                                    constant: Constants.defaultMargin),
+            tryAgainButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+                                                     constant: Constants.defaultNegativeMargin),
+            tryAgainButton.heightAnchor.constraint(equalToConstant: Constants.defaultButtonHeight),
+            tryAgainButton.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constants)
     }
     
     func viewCodeAdditioalSetup() {

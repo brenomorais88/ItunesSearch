@@ -8,8 +8,10 @@
 import Foundation
 
 class MusicSearchModel {
+    let resultsLimit: Int
     
-    init() {
+    init(resultsLimit: Int) {
+        self.resultsLimit = resultsLimit
     }
 }
 
