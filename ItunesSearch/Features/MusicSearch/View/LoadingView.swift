@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class LoadingView: UIView {
-    private let messageLabel: UILabel = {
+    lazy private var messageLabel: UILabel = {
         let label = UILabel()
         label.text = Strings.kLoagindMsg.rawValue
         label.numberOfLines = 0
@@ -18,7 +18,7 @@ class LoadingView: UIView {
         return label
     }()
     
-    private let loading: UIActivityIndicatorView = {
+    lazy private var loading: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView()
         loading.translatesAutoresizingMaskIntoConstraints = false
         return loading
@@ -33,7 +33,7 @@ class LoadingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func setupView() {
+    private func setupView() {
         self.viewCodeSetup()
     }
 }

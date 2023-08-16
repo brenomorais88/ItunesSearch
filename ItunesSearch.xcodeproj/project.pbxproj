@@ -32,6 +32,8 @@
 		0FD1AB412A8D192C00DA30DC /* MusicSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB402A8D192C00DA30DC /* MusicSearchRequest.swift */; };
 		0FD1AB432A8D1ADE00DA30DC /* MusicsSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB422A8D1ADE00DA30DC /* MusicsSearchResponse.swift */; };
 		0FD1AB452A8D289100DA30DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB442A8D289100DA30DC /* Constants.swift */; };
+		0FD1AB472A8D333C00DA30DC /* MusicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB462A8D333C00DA30DC /* MusicsView.swift */; };
+		0FD1AB4A2A8D350500DA30DC /* MusicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB492A8D350500DA30DC /* MusicsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		0FD1AB402A8D192C00DA30DC /* MusicSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchRequest.swift; sourceTree = "<group>"; };
 		0FD1AB422A8D1ADE00DA30DC /* MusicsSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsSearchResponse.swift; sourceTree = "<group>"; };
 		0FD1AB442A8D289100DA30DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0FD1AB462A8D333C00DA30DC /* MusicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsView.swift; sourceTree = "<group>"; };
+		0FD1AB492A8D350500DA30DC /* MusicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +196,10 @@
 		0FD1AB1E2A8D0CC100DA30DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0FD1AB482A8D34EB00DA30DC /* Cell */,
 				0FD1AB382A8D11E400DA30DC /* LoadingView.swift */,
 				0FD1AB3A2A8D12CC00DA30DC /* ErrorView.swift */,
+				0FD1AB462A8D333C00DA30DC /* MusicsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,6 +267,14 @@
 				0FD1AB402A8D192C00DA30DC /* MusicSearchRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		0FD1AB482A8D34EB00DA30DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB492A8D350500DA30DC /* MusicsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,11 +414,13 @@
 				0FD1AB332A8D0E4900DA30DC /* Strings.swift in Sources */,
 				0FD1AB282A8D0D1200DA30DC /* MusicSearchViewController.swift in Sources */,
 				0FD1AB432A8D1ADE00DA30DC /* MusicsSearchResponse.swift in Sources */,
+				0FD1AB472A8D333C00DA30DC /* MusicsView.swift in Sources */,
 				0FD1AAEA2A8D0B9F00DA30DC /* AppDelegate.swift in Sources */,
 				0FD1AB362A8D0E4900DA30DC /* Observable.swift in Sources */,
 				0FD1AB392A8D11E400DA30DC /* LoadingView.swift in Sources */,
 				0FD1AB262A8D0D0100DA30DC /* MusicSearchModel.swift in Sources */,
 				0FD1AB372A8D0E4900DA30DC /* ViewModel.swift in Sources */,
+				0FD1AB4A2A8D350500DA30DC /* MusicsCell.swift in Sources */,
 				0FD1AB242A8D0CF600DA30DC /* MusicSearchViewModel.swift in Sources */,
 				0FD1AB352A8D0E4900DA30DC /* ViewCodeProtocol.swift in Sources */,
 				0FD1AB3B2A8D12CC00DA30DC /* ErrorView.swift in Sources */,

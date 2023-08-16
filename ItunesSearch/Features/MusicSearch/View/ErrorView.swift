@@ -13,7 +13,7 @@ protocol ErrorViewProtocol {
 }
 
 class ErrorView: UIView {
-    private let messageLabel: UILabel = {
+    lazy private var messageLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -21,7 +21,7 @@ class ErrorView: UIView {
         return label
     }()
     
-    private let tryAgainButton: FirstButton = {
+    lazy private var tryAgainButton: FirstButton = {
         let button = FirstButton(text: Strings.kTryAgain.rawValue)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

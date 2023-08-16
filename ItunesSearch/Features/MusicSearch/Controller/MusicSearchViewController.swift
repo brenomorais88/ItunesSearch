@@ -80,14 +80,13 @@ class MusicSearchViewController: UIViewController {
         let view = LoadingView()
         view.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(view)
-        view.setupView()
         self.loadingView = view
         setupViewConstants(view: view)
     }
     
     private func setupResultsView(musics: [Musics]) {
         self.cleanViews()
-        let resultsView = UIView()
+        let resultsView = MusicsView(musics: musics)
         resultsView.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(resultsView)
         self.resultsView = resultsView
