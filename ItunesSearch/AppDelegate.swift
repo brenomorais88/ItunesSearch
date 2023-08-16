@@ -9,8 +9,9 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var window: UIWindow?
+    private var coordinator: MusicSearchCoordinator?
+    private let navigation = UINavigationController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,6 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    //MARK: start
+    func start() {
+        coordinator = MusicSearchCoordinator(navigationController: navigation)
+        coordinator?.start()
+        if let nav = coordinator?.navigationController {
+            self.window?.rootViewController = nav
+            window?.makeKeyAndVisible()
+        }
+    }
 }
 
