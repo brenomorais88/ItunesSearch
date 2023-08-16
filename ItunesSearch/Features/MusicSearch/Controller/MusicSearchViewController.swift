@@ -131,6 +131,16 @@ class MusicSearchViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(constants)
     }
+    
+    private func showEmptyTextWarning() {
+        let alert = UIAlertController(title: Strings.kEmptyAlertTitle.rawValue,
+                                      message: Strings.kEmptyAlertText.rawValue,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Strings.kOk.rawValue,
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension MusicSearchViewController: ViewCodeProtocol {
@@ -159,7 +169,14 @@ extension MusicSearchViewController: ViewCodeProtocol {
 
 extension MusicSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.viewModel?.loadData(term: textField.text ?? "")
+        guard let text = textField.text else {
+            return true
+        }
+        if text.isEmpty {
+            showEmptyTextWarning()
+            return false
+        }
+        self.viewModel?.loadData(term: text)
         textField.resignFirstResponder()
         return true
     }

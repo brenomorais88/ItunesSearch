@@ -16,10 +16,7 @@ enum Strings: String {
     case kNoResultsMessage = "no results found"
     case kInitialArtistName = "Eminem"
     case kPlaceholder = "placeholder"
-    
-//    case kOk = "Ok"
-//    case kAlert = "Alert"
-//    case kMoreUsers = "Load more users"
-//    case kItensViewTitle = "Itens List"
-//    case kEmptyCacheMsg = "Internet connection unavailable.\nWe tried to recover the data from the last session but it was not possible."
+    case kOk = "Ok"
+    case kEmptyAlertTitle = "empty search field"
+    case kEmptyAlertText = "You need to fill in at least one character to get any result in your search"
 }
