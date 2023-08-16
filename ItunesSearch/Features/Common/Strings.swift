@@ -8,7 +8,8 @@
 import Foundation
 
 enum Strings: String {
-    case kSearchViewTitle = "Search List"
+    case kSearchViewTitle = "Search Musics List"
+    case kDetailsViewTitle = "Music Details"
     case kArtistName = "artist name"
     case kLoagindMsg = "Please, wait.\nWe are loagind your data."
     case kErrorMessage = "An error has occurred.\nTry again later."

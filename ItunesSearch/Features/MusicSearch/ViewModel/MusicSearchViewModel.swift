@@ -14,10 +14,17 @@ enum MusicSearchViewState {
     case Error
 }
 
-class MusicSearchViewModel: ViewModel {
+protocol MusicSearchViewModelProtocol {
+    func loadData(term: String)
+    func showDetail(music: Musics)
+    var viewState: Observable<MusicSearchViewState> { get set }
+}
+
+class MusicSearchViewModel: ViewModel, MusicSearchViewModelProtocol {
     let delegate: MusicSearchCoordinatorProtocol
     let model: MusicSearchModel
     let service: ITunesServiceProtocol
+    var viewState: Observable<MusicSearchViewState> = Observable(.Loading)
     
     init(delegate: MusicSearchCoordinatorProtocol,
          model: MusicSearchModel,
@@ -27,8 +34,6 @@ class MusicSearchViewModel: ViewModel {
         self.service = service
         super.init()
     }
-    
-    var viewState: Observable<MusicSearchViewState> = Observable(.Loading)
     
     func loadData(term: String) {
         self.viewState.value = .Loading
@@ -51,5 +56,9 @@ class MusicSearchViewModel: ViewModel {
                 self.viewState.value = .Error
             }
         }
+    }
+    
+    func showDetail(music: Musics) {
+        self.delegate.showDetail(music: music)
     }
 }

@@ -76,7 +76,7 @@ extension MusicsView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+        return 132
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

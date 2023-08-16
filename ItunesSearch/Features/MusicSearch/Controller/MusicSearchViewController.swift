@@ -8,7 +8,7 @@
 import UIKit
 
 class MusicSearchViewController: UIViewController {
-    let viewModel: MusicSearchViewModel?
+    let viewModel: MusicSearchViewModelProtocol?
     private var currentView: UIView?
     
     private let searchTextField: UISearchTextField = {
@@ -29,7 +29,7 @@ class MusicSearchViewController: UIViewController {
     private var resultsView: UIView?
     private var loadingView: UIView?
     
-    init(viewModel: MusicSearchViewModel?) {
+    init(viewModel: MusicSearchViewModelProtocol?) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,6 +53,10 @@ class MusicSearchViewController: UIViewController {
         super.viewDidAppear(animated)
         self.loadListener()
         self.viewModel?.loadData(term: self.searchTextField.text ?? "")
+    }
+    
+    deinit {
+        print("dealoc: MusicSearchViewController")
     }
     
     private func loadListener() {
@@ -89,6 +93,7 @@ class MusicSearchViewController: UIViewController {
         self.cleanViews()
         let resultsView = MusicsView(musics: musics)
         resultsView.translatesAutoresizingMaskIntoConstraints = false
+        resultsView.delegate = self
         self.contentView.addSubview(resultsView)
         self.resultsView = resultsView
         setupViewConstants(view: resultsView)
@@ -187,3 +192,10 @@ extension MusicSearchViewController: ErrorViewProtocol {
         self.viewModel?.loadData(term: self.searchTextField.text ?? "")
     }
 }
+
+extension MusicSearchViewController: MusicsViewProtocol {
+    func showDetail(music: Musics) {
+        self.viewModel?.showDetail(music: music)
+    }
+}
+

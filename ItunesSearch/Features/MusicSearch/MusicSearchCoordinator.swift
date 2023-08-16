@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol MusicSearchCoordinatorProtocol {
-    func showMusicDetails()
+protocol MusicSearchCoordinatorProtocol: AnyObject {
+    func showDetail(music: Musics)
 }
 
 class MusicSearchCoordinator: Coordinator {
@@ -21,7 +21,12 @@ class MusicSearchCoordinator: Coordinator {
 }
 
 extension MusicSearchCoordinator: MusicSearchCoordinatorProtocol {
-    func showMusicDetails() {
-        
+    func showDetail(music: Musics) {
+        let model = MusicDetailModel(music: music)
+        let viewModel = MusicDetailViewModel(delegate: self, model: model)
+        self.viewController = MusicDetailViewController(viewModel: viewModel)
+        if let vc = self.viewController {
+            self.navigationController.pushViewController(vc, animated: true)
+        }
     }
 }
