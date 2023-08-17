@@ -41,6 +41,9 @@ struct Musics: Codable {
     }
     
     func getFormattedValue() -> String {
-        return "R$10,99"
+        let price: Double = self.collectionPrice ?? 0.0
+        let priceString = "\(price)"
+        let value = "$ \(priceString)"
+        return value
     }
 }

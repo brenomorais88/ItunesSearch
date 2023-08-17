@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB275962A8EA72F001B7E5E /* Music.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB275952A8EA72F001B7E5E /* Music.json */; };
 		0FD1AAEA2A8D0B9F00DA30DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AAE92A8D0B9F00DA30DC /* AppDelegate.swift */; };
 		0FD1AAEC2A8D0B9F00DA30DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AAEB2A8D0B9F00DA30DC /* SceneDelegate.swift */; };
 		0FD1AAF12A8D0B9F00DA30DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1AAEF2A8D0B9F00DA30DC /* Main.storyboard */; };
 		0FD1AAF32A8D0BA100DA30DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1AAF22A8D0BA100DA30DC /* Assets.xcassets */; };
 		0FD1AAF62A8D0BA100DA30DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1AAF42A8D0BA100DA30DC /* LaunchScreen.storyboard */; };
-		0FD1AB012A8D0BA100DA30DC /* ItunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB002A8D0BA100DA30DC /* ItunesSearchTests.swift */; };
 		0FD1AB0B2A8D0BA200DA30DC /* ItunesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB0A2A8D0BA200DA30DC /* ItunesSearchUITests.swift */; };
 		0FD1AB0D2A8D0BA200DA30DC /* ItunesSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB0C2A8D0BA200DA30DC /* ItunesSearchUITestsLaunchTests.swift */; };
 		0FD1AB1D2A8D0CBD00DA30DC /* MusicSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB1C2A8D0CBD00DA30DC /* MusicSearchCoordinator.swift */; };
@@ -41,6 +41,14 @@
 		0FD1AB592A8D46D800DA30DC /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB582A8D46D800DA30DC /* MusicDetailViewController.swift */; };
 		0FD1AB5B2A8E62ED00DA30DC /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB5A2A8E62ED00DA30DC /* UIColor+extension.swift */; };
 		0FD1AB602A8E934200DA30DC /* MusicDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB5F2A8E934200DA30DC /* MusicDetailCell.swift */; };
+		0FD1AB662A8E9A8C00DA30DC /* JsonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB642A8E9A8C00DA30DC /* JsonHandler.swift */; };
+		0FD1AB672A8E9A8C00DA30DC /* HearthstoneCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB652A8E9A8C00DA30DC /* HearthstoneCardsTests.swift */; };
+		0FD1AB6C2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB6B2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift */; };
+		0FD1AB6E2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB6D2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift */; };
+		0FD1AB702A8E9B4500DA30DC /* LoadingViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB6F2A8E9B4500DA30DC /* LoadingViewSpec.swift */; };
+		0FD1AB722A8E9B5200DA30DC /* ErrorViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB712A8E9B5200DA30DC /* ErrorViewSpec.swift */; };
+		0FD1AB742A8E9B5E00DA30DC /* MusicsViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB732A8E9B5E00DA30DC /* MusicsViewSpec.swift */; };
+		0FD1AB772A8E9B7600DA30DC /* MusicSearchCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB762A8E9B7600DA30DC /* MusicSearchCoordinatorSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FB275952A8EA72F001B7E5E /* Music.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Music.json; sourceTree = "<group>"; };
 		0FD1AAE62A8D0B9F00DA30DC /* ItunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD1AAE92A8D0B9F00DA30DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FD1AAEB2A8D0B9F00DA30DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +78,6 @@
 		0FD1AAF52A8D0BA100DA30DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FD1AAF72A8D0BA100DA30DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FD1AAFC2A8D0BA100DA30DC /* ItunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FD1AB002A8D0BA100DA30DC /* ItunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchTests.swift; sourceTree = "<group>"; };
 		0FD1AB062A8D0BA200DA30DC /* ItunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD1AB0A2A8D0BA200DA30DC /* ItunesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchUITests.swift; sourceTree = "<group>"; };
 		0FD1AB0C2A8D0BA200DA30DC /* ItunesSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -99,6 +107,14 @@
 		0FD1AB582A8D46D800DA30DC /* MusicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewController.swift; sourceTree = "<group>"; };
 		0FD1AB5A2A8E62ED00DA30DC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		0FD1AB5F2A8E934200DA30DC /* MusicDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailCell.swift; sourceTree = "<group>"; };
+		0FD1AB642A8E9A8C00DA30DC /* JsonHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHandler.swift; sourceTree = "<group>"; };
+		0FD1AB652A8E9A8C00DA30DC /* HearthstoneCardsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HearthstoneCardsTests.swift; sourceTree = "<group>"; };
+		0FD1AB6B2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewControllerSpec.swift; sourceTree = "<group>"; };
+		0FD1AB6D2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewModelSpec.swift; sourceTree = "<group>"; };
+		0FD1AB6F2A8E9B4500DA30DC /* LoadingViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpec.swift; sourceTree = "<group>"; };
+		0FD1AB712A8E9B5200DA30DC /* ErrorViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewSpec.swift; sourceTree = "<group>"; };
+		0FD1AB732A8E9B5E00DA30DC /* MusicsViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicsViewSpec.swift; sourceTree = "<group>"; };
+		0FD1AB762A8E9B7600DA30DC /* MusicSearchCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchCoordinatorSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FB275942A8EA71B001B7E5E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0FB275952A8EA72F001B7E5E /* Music.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		0FD1AADD2A8D0B9F00DA30DC = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +187,10 @@
 		0FD1AAFF2A8D0BA100DA30DC /* ItunesSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FD1AB002A8D0BA100DA30DC /* ItunesSearchTests.swift */,
+				0FB275942A8EA71B001B7E5E /* Mocks */,
+				0FD1AB632A8E9A7500DA30DC /* Util */,
+				0FD1AB622A8E9A6C00DA30DC /* MusicDetailTests */,
+				0FD1AB612A8E9A6100DA30DC /* MusicSearchTests */,
 			);
 			path = ItunesSearchTests;
 			sourceTree = "<group>";
@@ -346,6 +373,67 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0FD1AB612A8E9A6100DA30DC /* MusicSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB752A8E9B6800DA30DC /* Coordinator */,
+				0FD1AB6A2A8E9B0100DA30DC /* View */,
+				0FD1AB692A8E9AFC00DA30DC /* ViewModel */,
+				0FD1AB682A8E9AF600DA30DC /* Controller */,
+			);
+			path = MusicSearchTests;
+			sourceTree = "<group>";
+		};
+		0FD1AB622A8E9A6C00DA30DC /* MusicDetailTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MusicDetailTests;
+			sourceTree = "<group>";
+		};
+		0FD1AB632A8E9A7500DA30DC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB652A8E9A8C00DA30DC /* HearthstoneCardsTests.swift */,
+				0FD1AB642A8E9A8C00DA30DC /* JsonHandler.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0FD1AB682A8E9AF600DA30DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB6B2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0FD1AB692A8E9AFC00DA30DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB6D2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0FD1AB6A2A8E9B0100DA30DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB6F2A8E9B4500DA30DC /* LoadingViewSpec.swift */,
+				0FD1AB712A8E9B5200DA30DC /* ErrorViewSpec.swift */,
+				0FD1AB732A8E9B5E00DA30DC /* MusicsViewSpec.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FD1AB752A8E9B6800DA30DC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0FD1AB762A8E9B7600DA30DC /* MusicSearchCoordinatorSpec.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -460,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FB275962A8EA72F001B7E5E /* Music.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +601,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FD1AB012A8D0BA100DA30DC /* ItunesSearchTests.swift in Sources */,
+				0FD1AB722A8E9B5200DA30DC /* ErrorViewSpec.swift in Sources */,
+				0FD1AB702A8E9B4500DA30DC /* LoadingViewSpec.swift in Sources */,
+				0FD1AB772A8E9B7600DA30DC /* MusicSearchCoordinatorSpec.swift in Sources */,
+				0FD1AB662A8E9A8C00DA30DC /* JsonHandler.swift in Sources */,
+				0FD1AB742A8E9B5E00DA30DC /* MusicsViewSpec.swift in Sources */,
+				0FD1AB6C2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift in Sources */,
+				0FD1AB672A8E9A8C00DA30DC /* HearthstoneCardsTests.swift in Sources */,
+				0FD1AB6E2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
