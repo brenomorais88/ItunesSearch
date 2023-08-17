@@ -52,10 +52,10 @@ class MusicSearchViewModel: ViewModel, MusicSearchViewModelProtocol {
             if success {
                 guard let musics = musics else { return }
                 
-                if musics.count > 0 {
-                    self.viewState.value = .Data(musics)
-                } else {
+                if musics.isEmpty {
                     self.viewState.value = .Empty
+                } else {
+                    self.viewState.value = .Data(musics)
                 }
                 
             } else {

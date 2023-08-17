@@ -18,7 +18,26 @@ class MusicsCell: UITableViewCell {
     
     lazy private var titleLabel: UILabel = {
         let view = UILabel()
-        view.numberOfLines = 0
+        view.font = UIFont.boldSystemFont(ofSize: 16)
+        view.numberOfLines = 2
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy private var detailLabel: UILabel = {
+        let view = UILabel()
+        view.numberOfLines = 1
+        view.font = UIFont.systemFont(ofSize: 14)
+        view.textColor = UIColor.darkGray
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy private var priceLabel: UILabel = {
+        let view = UILabel()
+        view.numberOfLines = 1
+        view.font = UIFont.boldSystemFont(ofSize: 18)
+        view.textColor = UIColor.appGreen
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -35,6 +54,8 @@ class MusicsCell: UITableViewCell {
     override func prepareForReuse() {
         self.image.image = UIImage()
         self.titleLabel.text = ""
+        self.detailLabel.text = ""
+        self.priceLabel.text = ""
     }
     
     private func initialSetup() {
@@ -44,7 +65,9 @@ class MusicsCell: UITableViewCell {
     
     func setup(music: Musics) {
         self.image.imageFromURL(urlString: music.imgURL ?? "")
-        self.titleLabel.text = music.collectionName ?? ""
+        self.titleLabel.text = music.trackName ?? music.collectionName ?? ""
+        self.detailLabel.text = music.artistName
+        self.priceLabel.text = music.getFormattedValue()
     }
 }
 
@@ -52,6 +75,8 @@ extension MusicsCell: ViewCodeProtocol {
     func viewCodeHierarchySetup() {
         self.addSubview(image)
         self.addSubview(titleLabel)
+        self.addSubview(detailLabel)
+        self.addSubview(priceLabel)
     }
     
     func viewCodeConstraintSetup() {
@@ -64,7 +89,15 @@ extension MusicsCell: ViewCodeProtocol {
             
             titleLabel.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: Constants.defaultMargin),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.defaultNegativeMargin),
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.defaultMargin)
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.defaultMargin),
+            
+            detailLabel.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: Constants.defaultMargin),
+            detailLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.defaultNegativeMargin),
+            detailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.midleMargin),
+            
+            priceLabel.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: Constants.defaultMargin),
+            priceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.defaultNegativeMargin),
+            priceLabel.bottomAnchor.constraint(equalTo: image.bottomAnchor)
         ]
         NSLayoutConstraint.activate(constants)
     }

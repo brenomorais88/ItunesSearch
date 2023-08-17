@@ -13,6 +13,7 @@ enum MusicDetailViewState {
 
 protocol MusicDetailViewModelProtocol {
     func showDetails()
+    func viewTitle() -> String
     var viewState: Observable<MusicDetailViewState> { get set }
 }
 
@@ -31,6 +32,10 @@ class MusicDetailViewModel: ViewModel, MusicDetailViewModelProtocol {
     func showDetails() {
         let music = self.model.music
         self.viewState.value = .Data(music)
+    }
+    
+    func viewTitle() -> String {
+        return self.model.music.trackName ?? Strings.kDetailsViewTitle.rawValue
     }
 }
 

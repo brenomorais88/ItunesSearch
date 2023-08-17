@@ -20,9 +20,27 @@ struct MusicsSearchResponse: Codable {
 struct Musics: Codable {
     let collectionName: String?
     let imgURL: String?
+    let artistName: String?
+    let trackName: String?
+    let previewUrl: String?
+    let country: String?
+    let currency: String?
+    let primaryGenreName: String?
+    private let collectionPrice: Double?
     
     private enum CodingKeys: String, CodingKey {
         case collectionName = "collectionName"
         case imgURL = "artworkUrl100"
+        case artistName = "artistName"
+        case trackName = "trackName"
+        case previewUrl = "previewUrl"
+        case collectionPrice = "collectionPrice"
+        case country = "country"
+        case currency = "currency"
+        case primaryGenreName = "primaryGenreName"
+    }
+    
+    func getFormattedValue() -> String {
+        return "R$10,99"
     }
 }

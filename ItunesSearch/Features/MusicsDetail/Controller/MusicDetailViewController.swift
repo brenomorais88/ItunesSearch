@@ -34,7 +34,7 @@ class MusicDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = Strings.kDetailsViewTitle.rawValue
+        self.title = self.viewModel.viewTitle()
         self.view.backgroundColor = UIColor.white
     }
     
