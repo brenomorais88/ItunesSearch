@@ -9,7 +9,19 @@ import UIKit
 
 class MusicDetailViewController: UIViewController {
     let viewModel: MusicDetailViewModelProtocol
-    private var musicDetailsView: MusicDetailView?
+    
+    private let contentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let musicDetailsView: MusicDetailView = {
+        let view = MusicDetailView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
     init(viewModel: MusicDetailViewModelProtocol) {
         self.viewModel = viewModel
@@ -20,10 +32,6 @@ class MusicDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        print("dealoc: MusicDetailViewController")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Strings.kDetailsViewTitle.rawValue
@@ -32,6 +40,7 @@ class MusicDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.viewCodeSetup()
         self.loadListener()
     }
     
@@ -56,7 +65,23 @@ class MusicDetailViewController: UIViewController {
     }
     
     private func setupDetailsView(music: Musics) {
-        musicDetailsView = MusicDetailView(music: music)
-        self.view = musicDetailsView
+        self.musicDetailsView.setupView(music: music)
+    }
+}
+
+extension MusicDetailViewController: ViewCodeProtocol {
+    func viewCodeHierarchySetup() {
+        self.view.addSubview(musicDetailsView)
+    }
+    
+    func viewCodeConstraintSetup() {
+        let layoutGuide = self.view.safeAreaLayoutGuide
+        let constants = [
+            musicDetailsView.topAnchor.constraint(equalTo: layoutGuide.topAnchor),
+            musicDetailsView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor),
+            musicDetailsView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor),
+            musicDetailsView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor)
+        ]
+        NSLayoutConstraint.activate(constants)
     }
 }

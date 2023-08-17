@@ -8,47 +8,58 @@
 import Foundation
 import UIKit
 
-//protocol MusicDetailViewProtocol {
-//
-//}
-
 class MusicDetailView: UIView {
-    lazy private var messageLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    lazy private var image: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
     }()
     
-    let music: Musics
-//    var delegate: MusicDetailViewProtocol? = nil
+    lazy private var titleLabel: UILabel = {
+        let view = UILabel()
+        view.numberOfLines = 0
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     
-    init(music: Musics) {
-        self.music = music
+    var music: Musics?
+    
+    init() {
         super.init(frame: CGRect.zero)
-        self.setupView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupView(music: Musics) {
+        self.music = music
+        self.setupView()
+    }
+    
     private func setupView() {
-        self.backgroundColor = UIColor.red
+        self.image.imageFromURL(urlString: music?.imgURL ?? "")
+        self.titleLabel.text = music?.collectionName ?? ""
         self.viewCodeSetup()
     }
 }
 
 extension MusicDetailView: ViewCodeProtocol {
     func viewCodeHierarchySetup() {
-        self.addSubview(messageLabel)
+        self.addSubview(image)
+        self.addSubview(titleLabel)
     }
     
     func viewCodeConstraintSetup() {
         let constants = [
-            messageLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            image.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.defaultMargin),
+            image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Constants.defaultMargin),
+            image.heightAnchor.constraint(equalToConstant: Constants.imageSize100),
+            image.widthAnchor.constraint(equalToConstant: Constants.imageSize100),
+            
+            titleLabel.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: Constants.defaultMargin),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Constants.defaultNegativeMargin),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: Constants.defaultMargin)
         ]
         NSLayoutConstraint.activate(constants)
     }

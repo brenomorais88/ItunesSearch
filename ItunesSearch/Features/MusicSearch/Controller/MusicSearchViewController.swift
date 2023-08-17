@@ -55,10 +55,6 @@ class MusicSearchViewController: UIViewController {
         self.viewModel?.loadData(term: self.searchTextField.text ?? "")
     }
     
-    deinit {
-        print("dealoc: MusicSearchViewController")
-    }
-    
     private func loadListener() {
         viewModel?.viewState.bind({ [weak self] viewState in
             guard let viewState = viewState else {
@@ -75,6 +71,8 @@ class MusicSearchViewController: UIViewController {
                     self?.setupErrorView()
                 case .Data(let musics):
                     self?.setupResultsView(musics: musics)
+                case .Warning:
+                    self?.showEmptyTextWarning()
                 }
             }
         })
@@ -176,10 +174,6 @@ extension MusicSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let text = textField.text else {
             return true
-        }
-        if text.isEmpty {
-            showEmptyTextWarning()
-            return false
         }
         self.viewModel?.loadData(term: text)
         textField.resignFirstResponder()

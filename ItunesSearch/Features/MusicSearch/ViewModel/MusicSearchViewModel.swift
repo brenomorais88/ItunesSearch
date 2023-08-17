@@ -12,6 +12,7 @@ enum MusicSearchViewState {
     case Data([Musics])
     case Empty
     case Error
+    case Warning
 }
 
 protocol MusicSearchViewModelProtocol {
@@ -36,6 +37,11 @@ class MusicSearchViewModel: ViewModel, MusicSearchViewModelProtocol {
     }
     
     func loadData(term: String) {
+        if term.isEmpty {
+            self.viewState.value = .Warning
+            return
+        }
+        
         self.viewState.value = .Loading
         
         let request = MusicSearchRequest(term: term,
