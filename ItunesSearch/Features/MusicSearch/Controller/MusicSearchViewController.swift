@@ -9,7 +9,6 @@ import UIKit
 
 class MusicSearchViewController: UIViewController {
     let viewModel: MusicSearchViewModelProtocol?
-    private var currentView: UIView?
     
     private let searchTextField: UISearchTextField = {
         let view = UISearchTextField()
@@ -25,9 +24,9 @@ class MusicSearchViewController: UIViewController {
         return view
     }()
     
-    private var errorView: UIView?
-    private var resultsView: UIView?
-    private var loadingView: UIView?
+    var errorView: UIView?
+    var resultsView: UIView?
+    var loadingView: UIView?
     
     init(viewModel: MusicSearchViewModelProtocol?) {
         self.viewModel = viewModel
@@ -78,7 +77,7 @@ class MusicSearchViewController: UIViewController {
         })
     }
     
-    private func setupLoadingView() {
+    func setupLoadingView() {
         self.cleanViews()
         let view = LoadingView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -87,7 +86,7 @@ class MusicSearchViewController: UIViewController {
         setupViewConstants(view: view)
     }
     
-    private func setupResultsView(musics: [Musics]) {
+    func setupResultsView(musics: [Musics]) {
         self.cleanViews()
         let resultsView = MusicsView(musics: musics)
         resultsView.translatesAutoresizingMaskIntoConstraints = false
@@ -97,7 +96,7 @@ class MusicSearchViewController: UIViewController {
         setupViewConstants(view: resultsView)
     }
     
-    private func setupEmptyView() {
+    func setupEmptyView() {
         self.cleanViews()
         let errorView = ErrorView(error: Strings.kNoResultsMessage.rawValue)
         errorView.translatesAutoresizingMaskIntoConstraints = false
@@ -107,7 +106,7 @@ class MusicSearchViewController: UIViewController {
         setupViewConstants(view: errorView)
     }
     
-    private func setupErrorView() {
+    func setupErrorView() {
         self.cleanViews()
         let errorView = ErrorView(error: Strings.kErrorMessage.rawValue)
         errorView.delegate = self

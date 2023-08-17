@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import XCTest
 @testable import ItunesSearch
 
@@ -44,6 +43,7 @@ class MusicSearchCoordinatorSpec: XCTestCase {
         XCTAssertTrue(topViewController is MusicDetailViewController)
     }
     
+    //MARK: Utils
     private func mockMusic() -> Musics? {
         if let responseMock = JSONHandler().readJson(type: Musics.self, fileName: "Music") {
             return responseMock

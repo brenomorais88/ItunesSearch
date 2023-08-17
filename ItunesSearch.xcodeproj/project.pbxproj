@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3CB27A2A8EBE2300A65C8D /* MusicDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CB2792A8EBE2300A65C8D /* MusicDetailViewSpec.swift */; };
+		0F3CB27E2A8EBEDC00A65C8D /* MusicDetailViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CB27D2A8EBEDC00A65C8D /* MusicDetailViewControllerSpec.swift */; };
+		0F3CB2802A8EBEE500A65C8D /* MusicDetailViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CB27F2A8EBEE500A65C8D /* MusicDetailViewModelSpec.swift */; };
 		0FB275962A8EA72F001B7E5E /* Music.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB275952A8EA72F001B7E5E /* Music.json */; };
+		0FB275982A8EAB5F001B7E5E /* MusicResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB275972A8EAB5F001B7E5E /* MusicResponse.json */; };
+		0FB2759A2A8EAB71001B7E5E /* MusicResponseError.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB275992A8EAB71001B7E5E /* MusicResponseError.json */; };
+		0FB2759D2A8EAFA0001B7E5E /* MusicsResponseEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FB2759C2A8EAFA0001B7E5E /* MusicsResponseEmpty.json */; };
 		0FD1AAEA2A8D0B9F00DA30DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AAE92A8D0B9F00DA30DC /* AppDelegate.swift */; };
 		0FD1AAEC2A8D0B9F00DA30DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AAEB2A8D0B9F00DA30DC /* SceneDelegate.swift */; };
 		0FD1AAF12A8D0B9F00DA30DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD1AAEF2A8D0B9F00DA30DC /* Main.storyboard */; };
@@ -42,7 +48,6 @@
 		0FD1AB5B2A8E62ED00DA30DC /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB5A2A8E62ED00DA30DC /* UIColor+extension.swift */; };
 		0FD1AB602A8E934200DA30DC /* MusicDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB5F2A8E934200DA30DC /* MusicDetailCell.swift */; };
 		0FD1AB662A8E9A8C00DA30DC /* JsonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB642A8E9A8C00DA30DC /* JsonHandler.swift */; };
-		0FD1AB672A8E9A8C00DA30DC /* HearthstoneCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB652A8E9A8C00DA30DC /* HearthstoneCardsTests.swift */; };
 		0FD1AB6C2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB6B2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift */; };
 		0FD1AB6E2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB6D2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift */; };
 		0FD1AB702A8E9B4500DA30DC /* LoadingViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD1AB6F2A8E9B4500DA30DC /* LoadingViewSpec.swift */; };
@@ -69,7 +74,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F3CB2792A8EBE2300A65C8D /* MusicDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewSpec.swift; sourceTree = "<group>"; };
+		0F3CB27D2A8EBEDC00A65C8D /* MusicDetailViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewControllerSpec.swift; sourceTree = "<group>"; };
+		0F3CB27F2A8EBEE500A65C8D /* MusicDetailViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewModelSpec.swift; sourceTree = "<group>"; };
 		0FB275952A8EA72F001B7E5E /* Music.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Music.json; sourceTree = "<group>"; };
+		0FB275972A8EAB5F001B7E5E /* MusicResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MusicResponse.json; sourceTree = "<group>"; };
+		0FB275992A8EAB71001B7E5E /* MusicResponseError.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MusicResponseError.json; sourceTree = "<group>"; };
+		0FB2759C2A8EAFA0001B7E5E /* MusicsResponseEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MusicsResponseEmpty.json; sourceTree = "<group>"; };
 		0FD1AAE62A8D0B9F00DA30DC /* ItunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD1AAE92A8D0B9F00DA30DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FD1AAEB2A8D0B9F00DA30DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +119,6 @@
 		0FD1AB5A2A8E62ED00DA30DC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		0FD1AB5F2A8E934200DA30DC /* MusicDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailCell.swift; sourceTree = "<group>"; };
 		0FD1AB642A8E9A8C00DA30DC /* JsonHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonHandler.swift; sourceTree = "<group>"; };
-		0FD1AB652A8E9A8C00DA30DC /* HearthstoneCardsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HearthstoneCardsTests.swift; sourceTree = "<group>"; };
 		0FD1AB6B2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewControllerSpec.swift; sourceTree = "<group>"; };
 		0FD1AB6D2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSearchViewModelSpec.swift; sourceTree = "<group>"; };
 		0FD1AB6F2A8E9B4500DA30DC /* LoadingViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpec.swift; sourceTree = "<group>"; };
@@ -142,10 +152,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3CB2782A8EBE0D00A65C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CB2792A8EBE2300A65C8D /* MusicDetailViewSpec.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F3CB27B2A8EBEC800A65C8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CB27D2A8EBEDC00A65C8D /* MusicDetailViewControllerSpec.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0F3CB27C2A8EBECE00A65C8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CB27F2A8EBEE500A65C8D /* MusicDetailViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0FB275942A8EA71B001B7E5E /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				0FB275952A8EA72F001B7E5E /* Music.json */,
+				0FB275972A8EAB5F001B7E5E /* MusicResponse.json */,
+				0FB275992A8EAB71001B7E5E /* MusicResponseError.json */,
+				0FB2759C2A8EAFA0001B7E5E /* MusicsResponseEmpty.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -387,6 +424,9 @@
 		0FD1AB622A8E9A6C00DA30DC /* MusicDetailTests */ = {
 			isa = PBXGroup;
 			children = (
+				0F3CB27C2A8EBECE00A65C8D /* ViewModel */,
+				0F3CB27B2A8EBEC800A65C8D /* Controller */,
+				0F3CB2782A8EBE0D00A65C8D /* View */,
 			);
 			path = MusicDetailTests;
 			sourceTree = "<group>";
@@ -394,7 +434,6 @@
 		0FD1AB632A8E9A7500DA30DC /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				0FD1AB652A8E9A8C00DA30DC /* HearthstoneCardsTests.swift */,
 				0FD1AB642A8E9A8C00DA30DC /* JsonHandler.swift */,
 			);
 			path = Util;
@@ -548,7 +587,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FB2759A2A8EAB71001B7E5E /* MusicResponseError.json in Resources */,
 				0FB275962A8EA72F001B7E5E /* Music.json in Resources */,
+				0FB2759D2A8EAFA0001B7E5E /* MusicsResponseEmpty.json in Resources */,
+				0FB275982A8EAB5F001B7E5E /* MusicResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,12 +644,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD1AB722A8E9B5200DA30DC /* ErrorViewSpec.swift in Sources */,
+				0F3CB27E2A8EBEDC00A65C8D /* MusicDetailViewControllerSpec.swift in Sources */,
 				0FD1AB702A8E9B4500DA30DC /* LoadingViewSpec.swift in Sources */,
 				0FD1AB772A8E9B7600DA30DC /* MusicSearchCoordinatorSpec.swift in Sources */,
 				0FD1AB662A8E9A8C00DA30DC /* JsonHandler.swift in Sources */,
 				0FD1AB742A8E9B5E00DA30DC /* MusicsViewSpec.swift in Sources */,
+				0F3CB2802A8EBEE500A65C8D /* MusicDetailViewModelSpec.swift in Sources */,
 				0FD1AB6C2A8E9B2400DA30DC /* MusicSearchViewControllerSpec.swift in Sources */,
-				0FD1AB672A8E9A8C00DA30DC /* HearthstoneCardsTests.swift in Sources */,
+				0F3CB27A2A8EBE2300A65C8D /* MusicDetailViewSpec.swift in Sources */,
 				0FD1AB6E2A8E9B3500DA30DC /* MusicSearchViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
